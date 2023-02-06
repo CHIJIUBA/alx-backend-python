@@ -9,7 +9,7 @@ import asyncio
 import random
 
 
-async def wait_random(max_delay: int = 10) -> int:
+async def wait_random(max_delay: int = 10) -> float:
     ''' wait for a random number of  secomds
     '''
 

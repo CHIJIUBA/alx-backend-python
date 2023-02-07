@@ -13,7 +13,7 @@ compr = __import__('1-async_comprehension').async_comprehension
 async def measure_runtime() -> float:
     ''' Returns asynchronously time taken to execute gather
     '''
-    s: float = time.perf_counter()
+    s = time.perf_counter()
     await asyncio.gather(compr(), compr(), compr(), compr())
-    elapsed: float = time.perf_counter() - s
+    elapsed = time.perf_counter() - s
     return elapsed

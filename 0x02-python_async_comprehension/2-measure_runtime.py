@@ -14,6 +14,6 @@ async def measure_runtime() -> float:
     ''' Returns asynchronously time taken to execute gather
     '''
     s = time.perf_counter()
-    await asyncio.gather(compr(), compr(), compr(), compr())
+    await asyncio.gather(*(compr for _ in range(4)))
     elapsed = time.perf_counter() - s
     return elapsed
